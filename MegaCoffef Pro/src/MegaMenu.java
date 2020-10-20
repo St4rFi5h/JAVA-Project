@@ -35,9 +35,9 @@ public class MegaMenu {
 				
 				u = new MegaUser();     // MegaUser 초기화
 				System.out.println("Id를 입력해주세요.");
-				u.id= sc.next();
+				u.setId(sc.next());   //setId(String id)  <== 파라미터 안에 값을넣어야하니 () 안에 scanner 를 넣었다
 				System.out.println("비밀번호를 입력하세요.");
-				u.pass = sc.next();
+				u.setPass(sc.next());
 				usr.add(u);   //ArratList 에 유저추가
 				
 			}
@@ -50,7 +50,9 @@ public class MegaMenu {
 			
 			
 			else if(choice ==3) { //회원 정보검색
-				
+				for(int i=0; i>usr.size();i++) {
+					
+				}
 				
 			}
 			

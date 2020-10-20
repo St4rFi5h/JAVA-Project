@@ -12,7 +12,7 @@ public class MegaUser {
 		return id;
 	}
 
-	public void setId() {
+	public void setId(String id) {
 		this.id = id;
 	}
 
