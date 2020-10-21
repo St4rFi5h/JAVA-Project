@@ -41,6 +41,7 @@ public class MegaMenu {
 			System.out.println("3. 회원정보검색");
 			choice=sc.nextInt();
 			MegaUser u;   // MegaUser 객체화...종구찬스
+			
 			if(choice ==1) { ///회원등록
 				
 				u = new MegaUser();     // MegaUser 초기화
@@ -54,19 +55,20 @@ public class MegaMenu {
 			
 			
 			else if(choice ==2) { //주문
-				
+				Machine m =new Machine();
+				m.Machine(); //포스기 시작
 				
 			}
 			
 			
-			else if(choice ==3) { //회원 정보검색
+			else if(choice ==3) { //현 유저정보
 				for(int i=0; i<usr.size(); i++) {
 					System.out.println(usr.get(i).toString());
 					
 					
 				}
 				System.out.println("계속하시려면 아무거나 눌러주세요.");
-				int i = nextInt();
+				
 			}
 			
 			

@@ -1,4 +1,3 @@
-
 public class MegaUser {
 	private String id;  //아이디  private 
 	private String pass; //패스워드  private
