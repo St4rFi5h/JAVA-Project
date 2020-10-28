@@ -52,18 +52,10 @@ public class Coffee {
 
 
 
-	////// 스템프 계산 메소드
-	public void totalStamp() {
-		for(int i =0; i<cof.size(); i++) {
-			alStamp+=cof.get(i).getStamp();
-		}
-	}
-
-
 
 
 	/////최종 영수증	
-	public void sumStamp() { 
+	public void bill() { 
 		for(int i=0; i<cof.size();i++) {
 			if(cof.get(i).allprice !=0) {
 				System.out.println(cof.get(i).toString());
@@ -80,16 +72,17 @@ public class Coffee {
 
 		System.out.println("몇개주문하겠습니까?");
 		int count =sc.nextInt();
-		cof.get(i).sum+=count;
 		cof.get(i).allprice=(cof.get(i).price*count);
-		cof.get(i).setStamp(count);
+		alStamp+=count;
+
+
 
 	}
 
 
 	///////로그인, 스템프 적립
 	public void login() { 
-		MegaUser u = new MegaUser() ;   
+		  
 		System.out.println("회원 이신가요?");
 		System.out.println("1. 예  2. 아니요");
 		int i =sc.nextInt();
@@ -102,6 +95,7 @@ public class Coffee {
 				if(j.equals (usr.get(i).getId()) && k.equals(usr.get(i).getPass())) {
 					System.out.println("적립되었습니다.");
 					usr.get(i).setStamp(alStamp);
+					System.out.println(alStamp);
 					System.out.println(usr.get(i).getStamp());
 
 				}else {
@@ -114,7 +108,7 @@ public class Coffee {
 
 
 		}else if(i==2) {
-
+			
 		}
 
 
@@ -142,7 +136,7 @@ public class Coffee {
 		}
 		
 		System.out.println("계속하시려면 아무거나 눌러주세요.");
-		int i =sc.nextInt();
+		String i =sc.next();
 	}
 
 }

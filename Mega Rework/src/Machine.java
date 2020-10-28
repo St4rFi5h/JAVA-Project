@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class Machine  {
 	int count;
 	int choice;
-	int allsum=0;
 	int i;
 
 
@@ -19,26 +18,26 @@ public class Machine  {
 
 	public void Machine() {
 		Scanner sc = new Scanner(System.in);   //키보드 값을 입력받기위한 스캐너 
+		System.out.println("〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓");
+		System.out.println("메가커피에 오신걸 환영합니다.");
+		System.out.println("〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓\n\n");
 
+
+
+
+		System.out.println("                                                .,......                                                                       ");
+		System.out.println("  ,,,,    ,,,,  ,,,,,,,  ,,,,,,,     ,,,    ,,,,      ,,,,   ......    .....,,,  &&&&&&&& &&&&&&& ,,,,,,,, ,,,,,,,,           ");
+		System.out.println("  &&&&    &&&&  &&&&&&&* &&&&&&&&   &&&&&    ....      ....  %&&&&&&&, &&&&&&&&  &&&&&&&& &&&&&&& &&&&&&&& &&&&&&&&             ");
+		System.out.println("  &&&&&  &&&&&  &&&.     &&&  &&&   &&&&&&   .....   .....   &&&& &&&& &&&  &&&  &&&&     &&&     &&&&     &&&&                 ");
+		System.out.println("  &&&&&  &&&&&  &&&.     &&&       #&&&&&&    .. ..... ...   &&&&      &&&  &&&  &&&&     &&&     &&&&     &&&&                 ");
+		System.out.println("  &&&&&&&&&&&&  &&&&&&&  &&& &&&&  &&& &&&#   ... ...  ..    &&&&      &&&  &&&  &&&&&&&  &&&&&&& &&&&&&&  &&&&&&%              ");
+		System.out.println("  &&&&&&&&&&&&  &&&.     &&&  &&&  &&&&&&&&   ..... .....    &&&& &&&& &&&  &&&  &&&&     &&&     &&&&     &&&&                 ");
+		System.out.println("  &&& &&&&.&&&  &&&.     &&&  &&& &&&&%&&&&   .. ..... ..    &&&% &&&& &&%  &&&  &&&&     &&&     &&&&     &&&&                 ");
+		System.out.println("  &&& &&&&.&&&  &&&&&&&* &&&&&&&& &&&&  &&&%   .... ....      &&&&&&&  &&&&&&&&  &&&&     &&&     &&&&&&&& &&&&&&&&             ");
 
 		while(true) {
 			int choice;
-			System.out.println("〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓");
-			System.out.println("메가커피에 오신걸 환영합니다.");
-			System.out.println("〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓\n\n");
 
-
-
-
-			System.out.println("                                                .,......                                                                       ");
-			System.out.println("  ,,,,    ,,,,  ,,,,,,,  ,,,,,,,     ,,,    ,,,,      ,,,,   ......    .....,,,  &&&&&&&& &&&&&&& ,,,,,,,, ,,,,,,,,           ");
-			System.out.println("  &&&&    &&&&  &&&&&&&* &&&&&&&&   &&&&&    ....      ....  %&&&&&&&, &&&&&&&&  &&&&&&&& &&&&&&& &&&&&&&& &&&&&&&&             ");
-			System.out.println("  &&&&&  &&&&&  &&&.     &&&  &&&   &&&&&&   .....   .....   &&&& &&&& &&&  &&&  &&&&     &&&     &&&&     &&&&                 ");
-			System.out.println("  &&&&&  &&&&&  &&&.     &&&       #&&&&&&    .. ..... ...   &&&&      &&&  &&&  &&&&     &&&     &&&&     &&&&                 ");
-			System.out.println("  &&&&&&&&&&&&  &&&&&&&  &&& &&&&  &&& &&&#   ... ...  ..    &&&&      &&&  &&&  &&&&&&&  &&&&&&& &&&&&&&  &&&&&&%              ");
-			System.out.println("  &&&&&&&&&&&&  &&&.     &&&  &&&  &&&&&&&&   ..... .....    &&&& &&&& &&&  &&&  &&&&     &&&     &&&&     &&&&                 ");
-			System.out.println("  &&& &&&&.&&&  &&&.     &&&  &&& &&&&%&&&&   .. ..... ..    &&&% &&&& &&%  &&&  &&&&     &&&     &&&&     &&&&                 ");
-			System.out.println("  &&& &&&&.&&&  &&&&&&&* &&&&&&&& &&&&  &&&%   .... ....      &&&&&&&  &&&&&&&&  &&&&     &&&     &&&&&&&& &&&&&&&&             ");
 			System.out.println("〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓");
 			System.out.println("				        원하시는 서비스를 골라주세요                                                      ");
 			System.out.println("〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓");
@@ -54,7 +53,7 @@ public class Machine  {
 
 
 			else if(choice ==2) { //주문
-				//	while(true) { //총메뉴 무한
+
 				System.out.println("===메뉴===");
 				System.out.println("1. 커피");
 				System.out.println("2. 스무디");
@@ -65,18 +64,17 @@ public class Machine  {
 				if(choice ==1) {
 
 					System.out.println("===커피===");
-					System.out.println("1. 아메리카노");
+					System.out.println("1. 아메리카노 ");
 					System.out.println("2. 아이스 아메리카노");
 					System.out.println("3. 카페모카");
 					System.out.println("4. 카라멜마끼야또");
-					System.out.println("5. 뒤로가기");
 
 					choice=sc.nextInt();
 
 
 					i = (choice-1);
 					coff.buy(i);
-					coff.cof.get(i).toString();
+					System.out.println(coff.cof.get(i).toString());
 
 
 				}else if(choice ==2) { //스무디시작
@@ -86,9 +84,9 @@ public class Machine  {
 
 
 					choice=sc.nextInt();
-					i = (choice+3);
+					i = (choice+5);
 					coff.buy(i);
-					coff.cof.get(i).toString();
+					System.out.println(coff.cof.get(i).toString());
 
 
 
@@ -99,9 +97,9 @@ public class Machine  {
 					choice=sc.nextInt();
 
 
-					i = (choice+1);
+					i = (choice+5);
 					coff.buy(i);
-					coff.cof.get(i).toString();
+					System.out.println(coff.cof.get(i).toString());
 
 
 
@@ -114,14 +112,13 @@ public class Machine  {
 						coff.cof.get(i).toString();
 					}
 					coff.allsum();  ///총가격 계산 메소드
-					coff.totalStamp(); /// 스템프 계산 메소드
-					coff. sumStamp(); /// 최종 영수증
+					coff. bill(); /// 최종 영수증
 
 
 
 				}else{
 					continue;}
-				//}
+
 
 
 			}

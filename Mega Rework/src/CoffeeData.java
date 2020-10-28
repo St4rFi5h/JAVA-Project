@@ -1,9 +1,6 @@
-public class CoffeeData {
-	int price;
-	int count;
-	int sum=0; //기준
+public class CoffeeData {    //각 주문 메뉴 에대한 클래스 
+	int price; //음료 가격
 	int allprice; //총가격
-	int stamp; //도장
 	String name; //음료 이름
 
 	public CoffeeData() { //생성자
@@ -18,21 +15,7 @@ public class CoffeeData {
 
 	}
 
-	public int getStamp() {
-		return stamp;
-	}
 
-
-	public void setStamp(int stamp) {
-		this.stamp = stamp;
-	}
-
-
-	public CoffeeData(int count) { //도장, 수량을위한 카운트 
-		this.count=count;
-
-
-	}
 
 
 	@Override
