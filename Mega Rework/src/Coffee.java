@@ -1,3 +1,6 @@
+//coffee 클래스는 메소드를 모아둔 클래스입니다
+
+
 import java.util.Scanner;
 import java.util.ArrayList;
 public class Coffee {
@@ -58,7 +61,7 @@ public class Coffee {
 	public void bill() { 
 		for(int i=0; i<cof.size();i++) {
 			if(cof.get(i).allprice !=0) {
-				System.out.println(cof.get(i).toString());
+				System.out.println(cof.get(i));
 			}
 		}
 		System.out.println("지불하실 총금액은"+this.alsum+" 원 입니다");
@@ -93,13 +96,12 @@ public class Coffee {
 			String k = sc.next();
 			for(i=0; i< usr.size();i++) {
 				if(j.equals (usr.get(i).getId()) && k.equals(usr.get(i).getPass())) {
-					System.out.println("적립되었습니다.");
+					System.out.println("도장이 적립되었습니다.\n\n");
 					usr.get(i).setStamp(alStamp);
-					System.out.println(alStamp);
-					System.out.println(usr.get(i).getStamp());
+					
 
 				}else {
-					System.out.println("계정이 잘못되었습니다");
+					System.out.println("계정이 잘못되었습니다. 도장이 적립되지 않았습니다\n");
 				}
 
 
@@ -116,7 +118,18 @@ public class Coffee {
 	}
 
 
+	public void delete() {   ////미사용 Admin 만 접근가능하게 구현해야함
+		
 
+		System.out.println("지우실 유저를 고르세요");
+		for(int j=0; j<usr.size(); j++) {
+			System.out.println((j+1)+"번째 사람 ="+usr.get(j).getId()+":"+usr.get(j).getPass());
+		}
+		int choice = sc.nextInt();
+		{
+			usr.remove(choice-1);               
+		}
+}
 
 	 ///////회원가입
 	public void useradd() { 
@@ -130,13 +143,15 @@ public class Coffee {
 	 ///////회원 목록 출력
 	public void userprint() { 
 		for(int i=0; i<usr.size(); i++) {
-			System.out.println(usr.get(i).toString());
+			System.out.println(usr.get(i));
 
 
 		}
 		
-		System.out.println("계속하시려면 아무거나 눌러주세요.");
-		String i =sc.next();
+		
+
+		
+
 	}
 
 }

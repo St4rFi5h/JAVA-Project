@@ -1,4 +1,7 @@
 
+//쿠폰 사용 미구현
+
+
 import java.util.Scanner;
 public class Machine  {
 	int count;
@@ -7,12 +10,12 @@ public class Machine  {
 
 
 	Coffee coff =new Coffee(); //커피 값 저장되어있는곳
-	public Machine() { //생산자
+	public Machine() { //생산자 
 		run();
 	}
 
-	void run() {     //메인에서 run(); 하나로 MegaMenu 를 실행시키기 위한 메소드
-		Machine();
+	void run() {    
+		Machine();   // 메소드 Machine(); 실행
 
 	}
 
@@ -64,42 +67,42 @@ public class Machine  {
 				if(choice ==1) {
 
 					System.out.println("===커피===");
-					System.out.println("1. 아메리카노 ");
-					System.out.println("2. 아이스 아메리카노");
-					System.out.println("3. 카페모카");
-					System.out.println("4. 카라멜마끼야또");
+					System.out.println("1. 아메리카노  1500원");
+					System.out.println("2. 아이스 아메리카노 2000원");
+					System.out.println("3. 모카라떼 3000원 ");
+					System.out.println("4. 카라멜마끼야또 3000원");
 
 					choice=sc.nextInt();
 
 
-					i = (choice-1);
-					coff.buy(i);
-					System.out.println(coff.cof.get(i).toString());
+					i = (choice-1);  // 커피 , 스무디 , 케이크를 구분짓기 늦었다..
+					coff.buy(i); 
+					System.out.println(coff.cof.get(i));  //고른 커피에대한 갯수와 가격
 
 
 				}else if(choice ==2) { //스무디시작
 					System.out.println("===스무디===");
-					System.out.println("1. 요거트 스무디");
-					System.out.println("2. 딸기 스무디");
+					System.out.println("1. 요거트 스무디 4000원");
+					System.out.println("2. 딸기 스무디 4500원");
 
 
 					choice=sc.nextInt();
-					i = (choice+5);
+					i = (choice+4);
 					coff.buy(i);
-					System.out.println(coff.cof.get(i).toString());
+					System.out.println(coff.cof.get(i));
 
 
 
 				}else if(choice ==3) { //케이크시작
 					System.out.println("===케이크===");
-					System.out.println("1. 치즈케익");
-					System.out.println("2. 초코케익");
+					System.out.println("1. 치즈케익 5000원");
+					System.out.println("2. 초코케익 5000원");
 					choice=sc.nextInt();
 
 
 					i = (choice+5);
 					coff.buy(i);
-					System.out.println(coff.cof.get(i).toString());
+					System.out.println(coff.cof.get(i));
 
 
 
@@ -109,7 +112,7 @@ public class Machine  {
 					System.out.println("구매하신 커피 가격은");
 					for(int i=0;i<coff.cof.size();i++) 
 					{
-						coff.cof.get(i).toString();
+						coff.cof.get(i);
 					}
 					coff.allsum();  ///총가격 계산 메소드
 					coff. bill(); /// 최종 영수증
@@ -122,7 +125,7 @@ public class Machine  {
 
 
 			}
-			else if(choice ==3) { //현 유저정보
+			else if(choice ==3) { //현 유저 ,쿠폰 정보
 				coff.userprint();
 
 			}
